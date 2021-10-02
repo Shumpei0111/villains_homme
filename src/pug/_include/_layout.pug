@@ -1,0 +1,39 @@
+block variables 
+doctype html 
+html(lang='ja')
+    head 
+        
+    block head 
+        include /_include/_head.pug
+    
+    body 
+        block header 
+            include /_include/_header.pug
+
+        #main
+            block content
+
+            block starter 
+                include /_include/_starter.pug
+
+            block concept 
+                include /_include/_concept.pug
+
+            block feature 
+                include /_include/_feature.pug
+
+            block goods 
+                include /_include/_goods.pug
+
+            block starter 
+                include /_include/_starter.pug
+
+
+            block g-links 
+                include /_include/_g-links.pug
+            
+            block announce 
+                include /_include/_announce.pug
+
+        block footer 
+            include /_include/_footer.pug
