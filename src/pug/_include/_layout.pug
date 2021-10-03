@@ -7,10 +7,10 @@ html(lang='ja')
         include /_include/_head.pug
     
     body 
-        block header 
-            include /_include/_header.pug
-
         #main
+            //- block header 
+            //-     include /_include/_header.pug
+
             block content
 
             block starter 
@@ -35,5 +35,5 @@ html(lang='ja')
             block announce 
                 include /_include/_announce.pug
 
-        block footer 
-            include /_include/_footer.pug
+            block footer 
+                include /_include/_footer.pug

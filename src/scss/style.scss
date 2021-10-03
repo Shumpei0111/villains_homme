@@ -1,2 +1,8 @@
+@use './reset.css';
+@use './module/global';
+@use './module/fv';
+
 #main {
+    max-width: 750px;
+    margin: 0 auto;
 }

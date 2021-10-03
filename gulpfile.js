@@ -14,7 +14,9 @@ const paths = {
     'scss': './src/scss/**/*.scss',
     'css' : './dest/src/css/',
     'jsSrc': './src/js/**/*.js',
-    'js'  : './dest/src/js/'
+    'js'  : './dest/src/js/',
+    'imgSrc' : './src/img/**/*',
+    'img' : './dest/src/img/'
 };
 
 const { watch, series, task, src, dest, parallel } = require( 'gulp' );
@@ -58,6 +60,15 @@ task( 'js', function() {
     );
 } );
 
+
+// img
+task( 'img', function() {
+    return (
+        src( paths.imgSrc )
+            .pipe( dest( paths.img ) )
+    );
+} );
+
 // browser
 task( 'browser-sync', () => {
     return browserSync.init({
@@ -81,6 +92,7 @@ task( 'watch', done => {
     watch([paths.scss], series( 'sass', 'reload' ));
     watch([paths.jsSrc], series('js', 'reload'));
     watch([paths.pug], series('pug', 'reload'));
+    watch([paths.imgSrc], series('img', 'reload'));
     done();
 } );
 
