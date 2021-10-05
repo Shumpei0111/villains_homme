@@ -1,0 +1,25 @@
+@use './variables' as v;
+
+.concept {
+    text-align: center;
+
+    &__message_ja {
+        font-size: 3.0rem;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+
+    &__message_en {
+        font-size: 2.6rem;
+        margin-bottom: 40px;
+    }
+
+    &__cap_wrapper {
+
+        .concept__cap {
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+    }
+
+}
