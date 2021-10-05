@@ -1,6 +1,9 @@
 @use './reset.css';
 @use './module/global';
+
 @use './module/fv';
+@use './module/starter';
+
 
 #main {
     max-width: 750px;
