@@ -1,0 +1,16 @@
+@use './variables' as v;
+
+.g-links {
+    margin-top: 24px;
+
+    .links {
+        display: flex;
+        font-size: 1.2rem;
+        justify-content: center;
+        font-weight: bold;
+
+        li {
+            margin: 8px 10px;
+        }
+    }
+}

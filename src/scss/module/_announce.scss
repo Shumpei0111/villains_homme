@@ -1,0 +1,27 @@
+@use './variables' as v;
+
+.announce {
+    margin-top: 160px;
+    text-align: center;
+    font-size: 1.2rem;
+
+    p {
+        font-weight: bold;
+    }
+
+    .sns {
+        &__links {
+            display: flex;
+            justify-content: center;
+            margin: 24px 0 40px;
+
+            li {
+                margin: 0 12px;
+            }
+        }
+    }
+
+    .line {
+        line-height: 1.4;
+    }
+}
