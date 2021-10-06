@@ -134,10 +134,16 @@
                 border-style: solid;
                 border-width: 8px 0 8px 16px;
                 border-color: transparent transparent transparent v.$l-yellow;
+
             }
 
             &:hover {
+                color: v.$grey;
                 background-color: v.$l-grey;
+
+                .tri {
+                    border-color: transparent transparent transparent v.$grey;
+                }
             }
         } // __ctr
     }
