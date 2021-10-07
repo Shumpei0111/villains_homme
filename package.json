@@ -18,7 +18,9 @@
     "gulp-pug": "^5.0.0",
     "gulp-sass": "^5.0.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.42.1"
+    "sass": "^1.42.1",
+    "webpack": "^5.58.0",
+    "webpack-stream": "^7.0.0"
   },
   "browserslist": [
     "IE >= 11"

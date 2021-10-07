@@ -1,6 +1,8 @@
 @use './reset.css';
 @use './module/global';
 
+@use './module/fadein';
+
 @use './module/fv';
 @use './module/starter';
 @use './module/concept';

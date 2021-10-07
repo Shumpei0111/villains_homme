@@ -1,1 +1,3 @@
-window.onload = () => {console.log('script loaded');}
+import fadeIn from './fadein.js';
+
+fadeIn();

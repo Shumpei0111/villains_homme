@@ -7,6 +7,11 @@ const autoprefixer = require( 'gulp-autoprefixer' );
 const uglify = require( 'gulp-uglify' );
 const browserSync = require( 'browser-sync' );
 
+const webpackStream = require( 'webpack-stream' );
+const webpack = require( 'webpack' );
+const webpackConfig = require( './webpack.config.js' );
+
+
 const paths = {
     'root': './dest/',
     'pug' : './src/pug/**/*.pug',
@@ -87,12 +92,19 @@ task( 'reload', (done) => {
 } );
 
 
+// bundlejs
+task( 'bundle', () => {
+    return webpackStream( webpackConfig, webpack ).pipe( dest(paths.js) );
+} )
+
+
 // watch
 task( 'watch', done => {
     watch([paths.scss], series( 'sass', 'reload' ));
-    watch([paths.jsSrc], series('js', 'reload'));
+    // watch([paths.jsSrc], series('js', 'reload'));
     watch([paths.pug], series('pug', 'reload'));
     watch([paths.imgSrc], series('img', 'reload'));
+    watch([paths.jsSrc], series('bundle', 'reload'));
     done();
 } );
 
