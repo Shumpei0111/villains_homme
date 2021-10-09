@@ -7,6 +7,17 @@
     height: 100vh;
     margin-bottom: 3.5rem;
 
+    #fvLogo {
+        .top-logo {
+            position: absolute;
+            top: 20px;
+            margin: auto;
+            left: 0;
+            right: 0;
+            width: 380px;
+        }
+    }
+
     .fv__wrapper {    
         color: v.$l-yellow;
         position: absolute;

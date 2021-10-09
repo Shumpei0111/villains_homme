@@ -72,6 +72,7 @@ task( 'js', function() {
             .pipe( plumber() )
             .pipe( uglify() )
             .pipe( dest( paths.js ) )
+            // .pipe( webpackStream( webpackConfig, webpack ).pipe( dest(paths.js) ) )
     );
 } );
 
@@ -110,8 +111,8 @@ task( 'browser-sync', () => {
 
 // reload
 task( 'reload', (done) => {
-   browserSync.reload();
-   done(); 
+    browserSync.reload();
+    done(); 
 } );
 
 
@@ -124,7 +125,7 @@ task( 'bundle', () => {
 // watch
 task( 'watch', done => {
     watch([paths.scss], series( 'sass', 'reload' ));
-    // watch([paths.jsSrc], series('js', 'reload'));
+    watch([paths.jsSrc], series('js', 'reload'));
     watch([paths.pug], series('pug', 'reload'));
     watch([paths.imgSrc], series('img', 'reload'));
     watch([paths.jsSrc], series('bundle', 'reload'));
