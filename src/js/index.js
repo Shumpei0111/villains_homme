@@ -4,7 +4,14 @@ fadeIn();
 
 const fvFadeIn = () => {
     const $tgt = document.getElementById( 'fvAnimationTgt' );
-    $tgt.classList.add( 'active' );
+    const $topLogo = document.getElementById( 'fvLogo' );
+
+    const tgtArr = [ $tgt, $topLogo ];
+
+    for (let i = 0, n = tgtArr.length; i < n; i++) {
+        tgtArr[i].classList.add( 'active' );
+        
+    }
 }
 
 setTimeout( () => {
