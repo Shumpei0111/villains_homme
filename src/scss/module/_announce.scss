@@ -5,6 +5,29 @@
     text-align: center;
     font-size: 1.2rem;
 
+    .icon {
+        font-size: 3.5rem;
+
+        i {
+            cursor: pointer;
+        }
+    }
+
+    .i-tw {
+        color: v.$c-tw;
+    }
+    .i-ig {
+        background: v.$c-ig;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .i-tk {
+        color: v.$c-tk;
+    }
+    .i-line {
+        color: v.$c-line;
+    }
+
     p {
         font-weight: bold;
     }
@@ -16,7 +39,7 @@
             margin: 24px 0 40px;
 
             li {
-                margin: 0 12px;
+                margin: 0 20px;
             }
         }
     }
