@@ -7,9 +7,19 @@ const autoprefixer = require( 'gulp-autoprefixer' );
 const uglify = require( 'gulp-uglify' );
 const browserSync = require( 'browser-sync' );
 
+// img
+const imagemin = require('gulp-imagemin');
+const mozjpeg = require('imagemin-mozjpeg');
+const pngquant = require('imagemin-pngquant');
+const changed = require('gulp-changed');
+// img
+
+
+// webpack
 const webpackStream = require( 'webpack-stream' );
 const webpack = require( 'webpack' );
 const webpackConfig = require( './webpack.config.js' );
+// webpack
 
 
 const paths = {
@@ -70,6 +80,19 @@ task( 'js', function() {
 task( 'img', function() {
     return (
         src( paths.imgSrc )
+            .pipe( changed( paths.img ) ) // 差分比較
+            .pipe(
+                imagemin([
+                    pngquant({
+                        quality: [.7, .85], // 画質
+                        speed: 1
+                    }),
+                    mozjpeg({
+                        quality: 85, // 画質
+                        progressive: true
+                    })
+                ])
+            )
             .pipe( dest( paths.img ) )
     );
 } );
