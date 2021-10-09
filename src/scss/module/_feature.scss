@@ -47,5 +47,37 @@
                 content: "3";
             }
         }
+    } // __list
+
+    .appeal {
+        color: v.$red;
+        font-size: 1.2rem;
+
+        &__wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        &__patch-1 {
+            font-weight: bold;
+            border-bottom: 1px solid;
+            padding-bottom: 4px;
+            margin-right: 36px;
+        }
+
+        &__patch-2 {
+            border-bottom: 1px solid;
+            padding-bottom: 4px;
+
+            .patch-2__sub {
+                font-weight: bold;
+            }
+        }
+
+        &__attention {
+            display: flex;
+            justify-content: center;
+        }
     }
 }
