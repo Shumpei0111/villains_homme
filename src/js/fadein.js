@@ -1,5 +1,5 @@
-const fadeIn = () => {
-    let $tgt = document.querySelectorAll( '.animation' );
+const fadeIn = ( scrollVol, tgtClassName, addClassName ) => {
+    let $tgt = document.querySelectorAll( tgtClassName );
 
     window.addEventListener( 'scroll', () => {
         for (let i = 0; i < $tgt.length; i++) {
@@ -8,8 +8,8 @@ const fadeIn = () => {
             const offset  = element + scroll;
             const windowHeight = window.innerHeight;
 
-            if( scroll > offset - windowHeight + 150 ) {
-                $tgt[ i ].classList.add( 'active' );
+            if( scroll > offset - windowHeight + scrollVol ) {
+                $tgt[ i ].classList.add( addClassName );
             }
         }
     } );

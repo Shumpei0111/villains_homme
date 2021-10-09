@@ -1,6 +1,7 @@
 import fadeIn from './fadein.js';
 
-fadeIn();
+fadeIn( 150, '.animation', 'active' );
+fadeIn( 20, '.scrollin', 'active' );
 
 const fvFadeIn = () => {
     const $tgt = document.getElementById( 'fvAnimationTgt' );
