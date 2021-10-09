@@ -18,4 +18,6 @@ address {
     align-items: center;
     background-color: v.$grey;
     color: v.$l-yellow;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
 }

@@ -9,13 +9,20 @@
         font-size: 1.4rem;
         font-weight: bold;
         display: inline-block;
+        position: relative;
+
+        span {
+            padding-right: 20px;
+        }
 
         &:after {
             content: '';
             border: 1px solid v.$l-grey;
             display: inline-block;
-            width: 300px;
+            width: 100%;
             font-weight: 100;
+            position: absolute;
+            top: 50%;
         }
     }
 
@@ -41,10 +48,12 @@
         font-size: 1.4rem;
         margin-top: 16px;
         cursor: pointer;
+        transition: .2s;
 
         &:hover {
             color: v.$grey;
             background-color: v.$l-grey;
+            transition: .2s;
         }
     }
 
@@ -71,10 +80,17 @@
                 max-width: 150px;
                 margin: 0 16px;
                 cursor: pointer;
+                background-color: white;
+                transition: .2s;
 
                 p {
                     text-align: center;
                     font-size: 1.2rem;
+                }
+
+                &:hover {
+                    opacity: .7;
+                    transition: .2s;
                 }
             }
         }
