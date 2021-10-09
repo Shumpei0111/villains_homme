@@ -1,6 +1,7 @@
 import fadeIn from './fadein.js';
 
-fadeIn();
+fadeIn( 150, '.animation', 'active' );
+fadeIn( 20, '.scrollin', 'active' );
 
 const fvFadeIn = () => {
     const $tgt = document.getElementById( 'fvAnimationTgt' );
@@ -14,6 +15,18 @@ const fvFadeIn = () => {
     }
 }
 
+const closeBtn = ( tgt, wrapper ) => {
+    const $tgt = document.getElementById( tgt );
+    $tgt.addEventListener( 'click', () => {
+        const $w = document.getElementById( wrapper );
+        console.log($w);
+        $w.classList.add( 'none' );
+    } );
+}
+
+const handleEv = () => {}
+
 setTimeout( () => {
     fvFadeIn();
+    closeBtn( 'bnrCloseBtn', 'carecheck' );
 }, 100 )
