@@ -1,5 +1,4 @@
 @use './reset.css';
-@use './module/fadein';
 
 @use './module/global';
 
@@ -11,6 +10,9 @@
 @use './module/announce';
 @use './module/g-links';
 @use './module/footer';
+@use './module/skincare';
+
+@use './module/fadein';
 
 
 #main {
