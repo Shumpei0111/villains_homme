@@ -17,10 +17,16 @@
     &__container {
         border: 1px solid v.$grey;
         border-radius: 2px 2px 0 0;
-        padding: 40px 24px;
+        padding: 40px 15px;
         background-color: white;
 
-        &-img-wrapper {}
+        &-img-wrapper {
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: auto;
+            }
+        }
 
         &__block {
 
@@ -53,6 +59,7 @@
 
             .set-price-wrapper {
                 text-align: center;
+                margin-top: 40px;
                 
                 span,
                 p {
@@ -157,32 +164,33 @@
     }
 
     &__how-to {
-        padding-top: 48px;
-        display: flex;
-        justify-content: center;
+        // padding-top: 48px;
+        // display: flex;
+        // justify-content: center;
 
         .how-to {
             &__worries {
-                width: 100%;
-                position: relative;
+                display: flex;
+                // width: 100%;
+                // position: relative;
 
                 p {
                     font-size: 1.2rem;
                     padding: 16px;
-                    border: 1px solid;
-                    border-radius: 50%;
+                    // border: 1px solid;
+                    // border-radius: 50%;
                     text-align: center;
-                    width: 70%;
+                    // width: 70%;
                     margin-bottom: 8px;
-                    position: absolute;
+                    // position: absolute;
 
                     &:first-of-type {
                     
                     }
     
                     &:last-of-type {
-                        top: 64px;
-                        right: 15px;
+                        // top: 64px;
+                        // right: 15px;
                     }
                 }
             }
@@ -204,4 +212,14 @@
             }
         }
     } // __how-to
+
+    .set-items-starter-warapper {
+        display: flex;
+        
+
+        .set-items,
+        .startteer__how_to {
+            width: 50%;
+        }
+    }
 }
