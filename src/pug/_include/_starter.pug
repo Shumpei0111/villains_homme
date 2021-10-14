@@ -1,4 +1,4 @@
-.starter.starter_wrapper.g-padding
+.starter.starter_wrapper.g-padding.animation
     
     .starter__set-name 
         p 初回限定 スタートセット
@@ -7,41 +7,56 @@
 
         .starter__container-img-wrapper 
             img(src="/src/img/set-image.png", alt="キャンペーン限定のセット" width="784" height="608")
+            p.set-names 左から：オリジナルポーチ、フェイスマスク、スタンダードクリーム、BBクリーム、スタンダードローション
 
         .starter__container__block 
             .set-catch 
-                p メンズコスメ お試しキャンペーン実施中！
+                p 初回限定スタートキャンペーン実施中！
 
-            .set-items-starter-warapper
-                .set-items 
+            .set-items-points 
+                p.set-items-points-copy スタートセット<span>3つ</span>のポイント
+                .point-group 
+                    p.point-wrap Point 1
+                    h4.point-head ベーシックアイテムで始めやすい
+                    p.point-caption グッズに入っているのは基本的なスキンケアとポイントメイクアイテム。だから気軽に始められるし続けやすい！
+                .point-group 
+                    p.point-wrap Point 2
+                    h4.point-head ジェンダーレスデザイン
+                    p.point-caption モード感のあるシンプルなパッケージ。外で使っても気にならないデザインに仕上げました。
+                .point-group 
+                    p.point-wrap Point 3
+                    h4.point-head 持ち運び用のポーチ付き
+                    p.point-caption フェイクレザーポーチにメイク道具をイン。外出中にさっと身だしなみを整えるためのポーチです。
+
+            .set-items-starter-wrapper
+                .set-items
                     p ■ セット内容
-                    p.set-items__genre 【スキンケア】
-                    ul(style="display:inline-block")
+                    p.set-items__genre スキンケア
+                    ul.set-items__list
                         li V01 スタンダードローション（化粧水）
                         li V02 スタンダードクリーム（乳液）
-                    p.set-items__genre 【メイクアップ】
-                    ul(style="display:inline-block") 
+                    p.set-items__genre メイクアップ
+                    ul.set-items__list 
                         li V11 BBクリーム
-                    p.set-items__genre 【スペシャルケア】
-                    ul(style="display:inline-block") 
+                    p.set-items__genre スペシャルケア
+                    ul.set-items__list 
                         li V21 スタンダードフェイスマスク
-                    p.set-items__genre 【購入特典】
-                    ul(style="display:inline-block") 
+                    p.set-items__genre 購入特典
+                    ul.set-items__list 
                         li S01 オリジナルポーチ
 
                 .starter__how-to 
                     .how-to__worries 
-                        p 使い方がわからない…
-                        p バレたら恥ずかしいかも…
+                        p.worries1.cant-use 使い方がわからない…
+                        p.worries2.dont-get-caught バレたら恥ずかしいかも…
                     .how-to__movie-wrapper 
                         .movie 
                             img(src="/src/img/youtube.png", alt="公式YouTubeチャンネルのリンク")        
                         .movie-caption 
-                            p 初めてでも安心！
-                            p 使い方動画を公式YouTubeで公開中♪
+                            p 初めてでも安心！使い方動画を公式YouTubeで公開中♪
 
             .set-price-wrapper 
-                p 初めての方限定
+                p.only-first-user 【初めての方限定】
                 span 通常
                 span.set-price 6,800
                 span.set-price-unit 円(税別)
@@ -54,7 +69,9 @@
 
                 .set-benefits 
                     div 
-                        p 初回限定
+                        p オリジナル
+                            br
+                            | ポーチ付き
                     div 
                         p 送料無料
                     div 
@@ -65,15 +82,3 @@
     .starter__container__ctr 
         span.ctr_str 今すぐ申し込む 
         span.tri
-        
-
-    //- .starter__how-to 
-    //-     .how-to__worries 
-    //-         p 使い方がわからない…
-    //-         p バレたら恥ずかしいかも…
-    //-     .how-to__movie-wrapper 
-    //-         .movie 
-    //-             img(src="/src/img/youtube.png", alt="公式YouTubeチャンネルのリンク")        
-    //-         .movie-caption 
-    //-             p 初めてでも安心！
-    //-             p 使い方動画を公式YouTubeで公開中♪

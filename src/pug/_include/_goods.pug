@@ -4,10 +4,26 @@
         .items__genre
             span SKINCARE 
         .items__img
-            img(src="", alt="")
+            img.product__img(src="/src/img/product_v01.png", alt="V01 スタンダード・ローション")
         .items__name V01 スタンダードローション
         .items__caption
             span 男性の肌は、女性の約２倍の量の皮脂量を1日に分泌されるとしています。たっぷりお使いいただくことで肌を整え、皮脂の分泌を安定させてきれいな状態に整えます。
+        .items__tags 
+            ul.tags__list
+                li.tags__list-item 脂性肌・敏感肌の方
+                li.tags__list-item 毎日のケアアイテムをお探しの方
+        .items__detail-link 
+            span VIEW DETAIL 
+        
+        .items__img
+            img.product__img(src="/src/img/product_v02.png", alt="V02 スタンダード・クリーム")
+        .items__name V02 スタンダードクリーム
+        .items__caption
+            span 洗顔後、スタンダードローションで保湿したあと肌に水分をためておくために塗るクリームです。肌の乾燥を防ぎ、余計な皮脂の分泌を抑えることができます。
+        .items__tags 
+            ul.tags__list
+                li.tags__list-item 脂性肌・乾燥肌の方
+                li.tags__list-item 毎日のケアアイテムをお探しの方
         .items__detail-link 
             span VIEW DETAIL 
 
@@ -15,22 +31,41 @@
         .items__genre
             span MAKE UP  
         .items__img
-            img(src="", alt="")
+            img.product__img(src="/src/img/product_v11.png", alt="V11 BBクリーム")
         .items__name V11 BBクリーム
         .items__caption
             span 気になるニキビやヒゲ剃り後の気になる部分をこれ１本でカバー。男性の肌質に合わせた成分で崩れにくいのがポイントです。
+        .items__tags 
+            ul.tags__list
+                li.tags__list-item クマやニキビ跡を隠したい方
+                li.tags__list-item 気軽にメイクにチャレンジしてみたい方
+        .items__detail-link 
+            span VIEW DETAIL 
+
+    .items__wrapper
+        .items__genre
+            span SPECIAL CARE  
+        .items__img
+            img.product__img(src="/src/img/product_v21.png", alt="V21 フェイスマスク")
+        .items__name V21 フェイスマスク
+        .items__caption
+            span 疲れが溜まった日や、ここぞという時に使うスペシャルケア。スタンダードローション、フェイスマスク、スタンダードクリームの順にお使いいただくとより効果的です。７枚入り。
+        .items__tags 
+            ul.tags__list
+                li.tags__list-item 大事な日のために万全な肌コンディションで向かいたい方
+                li.tags__list-item 日々のケアをより効果的にしたい方
         .items__detail-link 
             span VIEW DETAIL 
     
     h3 CATEGORY 
     .category__wrapper 
-        ul 
-            li
-                img(src="", alt="")
+        ul.category
+            li.category__list
+                img.category__list-img(src="/src/img/product_v02.png", alt="V02 スタンダードクリーム")
                 p スキンケア
-            li
-                img(src="", alt="")
+            li.category__list
+                img.category__list-img(src="/src/img/product_v11.png", alt="V11 BBクリーム")
                 p メイクアップ
-            li
-                img(src="", alt="")
+            li.category__list
+                img.category__list-img(src="/src/img/product_v21.png", alt="V21 フェイスマスク")
                 p スペシャルケア

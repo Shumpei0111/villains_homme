@@ -14,7 +14,7 @@
 
             p {
                 line-height: 1.3;
-                width: 78%;
+                // width: 78%;
                 margin-left: 8px;
                 display: flex;
                 align-items: center;
@@ -52,6 +52,9 @@
     .appeal {
         color: v.$red;
         font-size: 1.2rem;
+        border: 1px solid;
+        border-radius: 4px;
+        padding: 24px 16px;
 
         &__wrapper {
             display: flex;
