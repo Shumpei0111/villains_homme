@@ -2,9 +2,17 @@
 
 .concept {
     text-align: center;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding: 160px 16px;
+    background-color: v.$white;
+    
+    h3 {
+        margin-top: 0;
+    }
 
     &__message_ja {
-        font-size: 3.0rem;
+        font-size: 2.75rem;
         font-weight: bold;
         margin-bottom: 16px;
     }
@@ -19,6 +27,13 @@
         .concept__cap {
             margin-bottom: 32px;
             line-height: 1.7;
+
+            .good_reaction {
+                font-size: 2.4rem;
+                display: inline-block;
+                padding-bottom: 12px;
+                color: v.$pink;
+            }
         }
     }
 

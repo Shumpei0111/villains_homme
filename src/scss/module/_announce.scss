@@ -1,9 +1,13 @@
 @use './variables' as v;
 
 .announce {
-    margin-top: 160px;
+    margin-top: 60px;
+    padding-top: 100px;
     text-align: center;
     font-size: 1.2rem;
+    background-color: v.$white;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
 
     .icon {
         font-size: 3.5rem;
