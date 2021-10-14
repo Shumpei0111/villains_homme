@@ -26,7 +26,14 @@
         }
     }
 
-    &__img {}
+    &__img {
+        text-align: center;
+        background-color: white;
+
+        .product__img {
+            width: 50%;
+        }
+    }
 
     &__name {
         font-size: 1.4rem;
@@ -62,7 +69,7 @@
         display: flex;
         justify-content: center;
 
-        ul {
+        .category {
             display: flex;
             overflow-x: scroll;
             -ms-overflow-style: none;    /* IE, Edge 対応 */
@@ -72,16 +79,20 @@
                 display: none;      /* Chrome, Safari 対応 */
             }
 
-            li {
+            &__list {
                 border: 1px solid v.$l-grey;
                 border-radius: 2px;
-                height: 192px;
-                min-width: 150px;
-                max-width: 150px;
+                height: 310px;
+                min-width: 210px;
+                max-width: 210px;
                 margin: 0 16px;
-                cursor: pointer;
                 background-color: white;
                 transition: .2s;
+                text-align: center;
+
+                &-img {
+                    width: 204px;
+                }
 
                 p {
                     text-align: center;
