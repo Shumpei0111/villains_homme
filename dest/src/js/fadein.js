@@ -1,0 +1,1 @@
+const fadeIn=(o,e,d)=>{let l=document.querySelectorAll(e);window.addEventListener("scroll",()=>{for(let e=0;e<l.length;e++){var t=l[e].getBoundingClientRect().top,n=window.pageYOffset||document.documentElement.scrollTop;t+n-window.innerHeight+o<n&&l[e].classList.add(d)}})};export default fadeIn;
