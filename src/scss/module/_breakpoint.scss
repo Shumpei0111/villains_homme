@@ -1,0 +1,44 @@
+$point: '665px';
+
+@media screen and (max-width:$point) {
+    .ad {
+        left: 0%;
+    }
+    .starter {
+
+        &__container {
+
+            &__block {
+                .set-catch {
+                    width: 100%;
+
+                    &:after {
+                        top: 5px;
+                        left: 5px;
+                    }
+                }
+
+                .set-items-starter-wrapper {
+                    flex-direction: column;
+
+                    .set-items {
+                        width: 100%;
+
+                        &__genre {
+                            width: 100%;
+                        }
+                    }
+                }
+            } // block
+        } // container
+
+        &__how-to {
+
+            .how-to__worries {
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    } // starter
+}
