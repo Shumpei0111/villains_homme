@@ -108,7 +108,7 @@ h3 {
 
 #fv {
   position: relative;
-  background: url(/src/img/first_view.png) no-repeat center center;
+  background: url(/src/img/first_view.jpg) no-repeat center center;
   background-size: cover;
   height: 100vh;
   margin-bottom: 3.5rem;
