@@ -1,4 +1,5 @@
 import fadeIn from './fadein.js';
+import luxy from 'luxy.js';
 
 fadeIn( 150, '.animation', 'active' );
 fadeIn( 20, '.scrollin', 'active' );
@@ -24,9 +25,26 @@ const closeBtn = ( tgt, wrapper ) => {
     } );
 }
 
-const handleEv = () => {}
+const setAdHeight = () => {
+    const $el = document.getElementById( 'carecheck' );
+    const point = window.innerHeight;
+    $el.style.top = point + 'px';
+}
+
+const followAdWindow = () => {
+    const $el = document.getElementById( 'carecheck' );
+    const $elHeight = $el.clientHeight;
+    const point = window.innerHeight;
+    
+    window.addEventListener( 'scroll', () => {
+        $el.style.top = ( window.scrollY + point - $elHeight ) + 'px';
+    }, false );
+}
 
 setTimeout( () => {
+    luxy.init();
+    setAdHeight();
     fvFadeIn();
     closeBtn( 'bnrCloseBtn', 'carecheck' );
+    followAdWindow();
 }, 100 )

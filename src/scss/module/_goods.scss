@@ -82,9 +82,12 @@
             transition: .2s;
         }
     }
+} // items
+
+.category {
+    margin-bottom: 160px;
 
     .category__wrapper {
-        margin-bottom: 160px;
         display: flex;
         justify-content: center;
 
@@ -111,18 +114,18 @@
 
                 &-img {
                     width: 204px;
+
+                    &:hover {
+                        opacity: .7;
+                        transition: .2s;
+                    }
                 }
 
                 p {
                     text-align: center;
                     font-size: 1.2rem;
                 }
-
-                &:hover {
-                    opacity: .7;
-                    transition: .2s;
-                }
             }
         }
     }
-} // items
+}

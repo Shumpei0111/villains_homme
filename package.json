@@ -28,5 +28,9 @@
   },
   "browserslist": [
     "IE >= 11"
-  ]
+  ],
+  "dependencies": {
+    "gsap": "^3.8.0",
+    "luxy.js": "^0.1.0"
+  }
 }
