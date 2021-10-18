@@ -53,3 +53,40 @@ h3 {
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
     font-weight: 700;
 }
+
+.marquee {
+    opacity: .2;
+    font-size: 30rem;
+    color: v.$grey;
+    line-height: 1;
+    transform-origin: left bottom;
+    letter-spacing: 0vw;
+    transform: translate(0px, 0px);
+    z-index: -1;
+
+    position: relative;
+
+    &-wrapper {
+        max-width: 1860px;
+        margin: 0 auto;
+        font-size: inherit !important;
+    }
+
+    &-item {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        white-space: nowrap;
+        animation: marquee 27s linear infinite;
+        transform: translate(-50%, 0%);
+        display: flex;
+        transition: all .3s;
+
+        span {
+            display: block;
+            white-space: nowrap;
+            padding-right: 20px;
+            text-align: center;
+        }
+    }
+}

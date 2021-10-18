@@ -106,6 +106,39 @@ h3 {
   font-weight: 700;
 }
 
+.marquee {
+  opacity: 0.2;
+  font-size: 30rem;
+  color: #707070;
+  line-height: 1;
+  transform-origin: left bottom;
+  letter-spacing: 0vw;
+  transform: translate(0px, 0px);
+  z-index: -1;
+  position: relative;
+}
+.marquee-wrapper {
+  max-width: 1860px;
+  margin: 0 auto;
+  font-size: inherit !important;
+}
+.marquee-item {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  white-space: nowrap;
+  animation: marquee 27s linear infinite;
+  transform: translate(-50%, 0%);
+  display: flex;
+  transition: all 0.3s;
+}
+.marquee-item span {
+  display: block;
+  white-space: nowrap;
+  padding-right: 20px;
+  text-align: center;
+}
+
 #fv {
   position: relative;
   background: url(/src/img/first_view.jpg) no-repeat center center;
@@ -489,8 +522,8 @@ h3 {
   align-items: center;
 }
 .feature__list-item:before {
-  background-color: #D3ECFF;
-  padding: 8px;
+  border: 1px solid;
+  padding: 8px 10px;
   border-radius: 50%;
   font-size: 1.2rem;
   font-weight: bold;
@@ -600,12 +633,15 @@ h3 {
   background-color: #bcbcbc;
   transition: 0.2s;
 }
-.items .category__wrapper {
+
+.category {
   margin-bottom: 160px;
+}
+.category .category__wrapper {
   display: flex;
   justify-content: center;
 }
-.items .category__wrapper .category {
+.category .category__wrapper .category {
   display: flex;
   overflow-x: scroll;
   -ms-overflow-style: none;
@@ -613,11 +649,11 @@ h3 {
   scrollbar-width: none;
   /* Firefox 対応 */
 }
-.items .category__wrapper .category::-webkit-scrollbar {
+.category .category__wrapper .category::-webkit-scrollbar {
   display: none;
   /* Chrome, Safari 対応 */
 }
-.items .category__wrapper .category__list {
+.category .category__wrapper .category__list {
   border: 1px solid #bcbcbc;
   border-radius: 2px;
   height: 310px;
@@ -628,16 +664,16 @@ h3 {
   transition: 0.2s;
   text-align: center;
 }
-.items .category__wrapper .category__list-img {
+.category .category__wrapper .category__list-img {
   width: 204px;
 }
-.items .category__wrapper .category__list p {
-  text-align: center;
-  font-size: 1.2rem;
-}
-.items .category__wrapper .category__list:hover {
+.category .category__wrapper .category__list-img:hover {
   opacity: 0.7;
   transition: 0.2s;
+}
+.category .category__wrapper .category__list p {
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .announce {
@@ -828,6 +864,14 @@ address {
   transform: translateY(0);
 }
 
+@keyframes marquee {
+  0% {
+    transform: translate(-40%, 0%);
+  }
+  100% {
+    transform: translate(-60%, 0%);
+  }
+}
 @media screen and (max-width: 665px) {
   .ad {
     left: 0%;
