@@ -28,5 +28,8 @@
   },
   "browserslist": [
     "IE >= 11"
-  ]
+  ],
+  "dependencies": {
+    "luxy.js": "^0.1.0"
+  }
 }

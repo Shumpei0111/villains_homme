@@ -736,7 +736,7 @@ address {
 .ad {
   width: 280px;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 5%;
   z-index: 2;
 }
