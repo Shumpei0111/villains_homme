@@ -479,6 +479,8 @@ h3 {
   margin-right: calc(-50vw + 50%);
   padding: 160px 16px;
   background-color: #ffffff;
+  position: relative;
+  height: 850px;
 }
 .concept h3 {
   margin-top: 0;
@@ -491,6 +493,12 @@ h3 {
 .concept__message_en {
   font-size: 2.6rem;
   margin-bottom: 40px;
+}
+.concept__cap_wrapper {
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
 }
 .concept__cap_wrapper .concept__cap {
   margin-bottom: 32px;
@@ -873,6 +881,11 @@ address {
   }
 }
 @media screen and (max-width: 665px) {
+  .sp-smooth-scroll {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+  }
+
   .ad {
     left: 0%;
   }

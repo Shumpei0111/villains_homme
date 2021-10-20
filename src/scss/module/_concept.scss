@@ -6,6 +6,8 @@
     margin-right: calc(-50vw + 50%);
     padding: 160px 16px;
     background-color: v.$white;
+    position: relative;
+    height: 850px;
     
     h3 {
         margin-top: 0;
@@ -23,6 +25,11 @@
     }
 
     &__cap_wrapper {
+        // top: 60px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
 
         .concept__cap {
             margin-bottom: 32px;
