@@ -1,5 +1,6 @@
 import fadeIn from './fadein.js';
 import luxy from 'luxy.js';
+import { getUserAgent } from './check-ua.js';
 
 fadeIn( 150, '.animation', 'active' );
 fadeIn( 20, '.scrollin', 'active' );
@@ -36,13 +37,39 @@ const followAdWindow = () => {
     const $elHeight = $el.clientHeight;
     const point = window.innerHeight;
     
-    window.addEventListener( 'scroll', () => {
-        $el.style.top = ( window.scrollY + point - $elHeight ) + 'px';
+    setTimeout( () => {
+        window.addEventListener( 'scroll', () => {
+                $el.style.top = ( window.scrollY + point - $elHeight ) + 'px';            
+        }, false );
+    }, 300 )
+
+}
+
+const ua = getUserAgent();
+const isMobile = ( function() {
+    return !!ua === 'ipad' || !!ua === 'iphone' || !!ua === 'android'
+} )();
+
+
+const checkWindowWidth = () => {
+    window.addEventListener( 'load', () => {
+        if( isMobile ) {
+            const $ = document.getElementById( 'main' );
+            $.classList.add('sp-smooth-scroll');
+        }
     }, false );
 }
 
+
 setTimeout( () => {
-    luxy.init();
+    alert(isMobile);
+    // luxyの慣性スクロールはモバイルに向かないのでやらない
+    if( !isMobile ) {
+        luxy.init();
+    } else {
+        checkWindowWidth();
+    }
+
     setAdHeight();
     fvFadeIn();
     closeBtn( 'bnrCloseBtn', 'carecheck' );
